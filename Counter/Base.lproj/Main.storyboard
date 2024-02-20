@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Bh-sF-ffW">
                                 <rect key="frame" x="10" y="59" width="373" height="749"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y2J-ux-ejt">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2J-ux-ejt">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="694"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -49,6 +49,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="minusActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLg-f0-W8S"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wni-dv-SiX">
                                                 <rect key="frame" x="163" y="0.0" width="47" height="50"/>
@@ -61,6 +64,9 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="refreshActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dnh-lZ-2bk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYf-w0-lY9">
                                                 <rect key="frame" x="240" y="0.0" width="47" height="50"/>
@@ -73,6 +79,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="plusActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKz-YJ-09t"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbY-27-0u0">
                                                 <rect key="frame" x="317" y="0.0" width="56" height="50"/>
@@ -97,6 +106,9 @@
                             <constraint firstItem="1Bh-sF-ffW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="epH-5U-4R3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultsTextView" destination="y2J-ux-ejt" id="XLY-Le-H9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
