@@ -21,7 +21,7 @@ final class ViewController: UIViewController {
     
     private func currentDate() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
         let result = dateFormatter.string(from: Date())
         return result
     }
@@ -29,22 +29,22 @@ final class ViewController: UIViewController {
     @IBAction func plusActionButton(_ sender: Any) {
         counter += 1
         counterLabel.text = String(counter)
-        resultsTextView.text += "\n\(currentDate()) значение изменено на: \(counter)"
+        resultsTextView.text += "\n\(currentDate()): значение изменено на: \(counter)"
     }
     @IBAction func minusActionButton(_ sender: Any) {
         if counter > 0 {
             counter -= 1
             counterLabel.text = String(counter)
-            resultsTextView.text += "\n\(currentDate()) значение изменено на: \(counter)"
+            resultsTextView.text += "\n\(currentDate()): значение изменено на: \(counter)"
         } else {
             counter = 0
-            resultsTextView.text += "\n\(currentDate()) попытка уменьшить значение счетчика ниже 0"
+            resultsTextView.text += "\n\(currentDate()): попытка уменьшить значение счетчика ниже 0"
         }
     }
     @IBAction func refreshActionButton(_ sender: Any) {
         counter = 0
         counterLabel.text = String(counter)
-        resultsTextView.text += "\n\(currentDate()) значение сброшено"
+        resultsTextView.text += "\n\(currentDate()): значение сброшено"
     }
 }
 
