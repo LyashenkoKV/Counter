@@ -16,11 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Bh-sF-ffW">
-                                <rect key="frame" x="10" y="59" width="373" height="749"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1Bh-sF-ffW">
+                                <rect key="frame" x="10" y="79" width="373" height="729"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-J8-gnH">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="gQ6-4Y-k5e"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BgG-8h-FQc">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="Значение счетчика:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dql-dc-YkJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="223.33333333333334" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mO-UI-qL7">
+                                                <rect key="frame" x="228.33333333333337" y="0.0" width="144.66666666666663" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2J-ux-ejt">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="694"/>
+                                        <rect key="frame" x="0.0" y="110" width="373" height="539"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -32,7 +56,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wCH-Cw-R6B">
-                                        <rect key="frame" x="0.0" y="699" width="373" height="50"/>
+                                        <rect key="frame" x="0.0" y="679" width="373" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdz-pX-sGl">
                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="50"/>
@@ -103,10 +127,11 @@
                             <constraint firstItem="1Bh-sF-ffW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ce9-OP-dIA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Bh-sF-ffW" secondAttribute="bottom" constant="10" id="TFW-wd-k5D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Bh-sF-ffW" secondAttribute="trailing" constant="10" id="ZYW-Av-fWv"/>
-                            <constraint firstItem="1Bh-sF-ffW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="epH-5U-4R3"/>
+                            <constraint firstItem="1Bh-sF-ffW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="epH-5U-4R3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="3mO-UI-qL7" id="Vg6-QH-ufk"/>
                         <outlet property="resultsTextView" destination="y2J-ux-ejt" id="XLY-Le-H9x"/>
                     </connections>
                 </viewController>
