@@ -9,8 +9,8 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    @IBOutlet weak var resultsTextView: UITextView!
-    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet private weak var resultsTextView: UITextView!
+    @IBOutlet private weak var counterLabel: UILabel!
     private var counter = 0
     
     override func viewDidLoad() {
@@ -26,12 +26,12 @@ final class ViewController: UIViewController {
         return result
     }
 
-    @IBAction func plusActionButton(_ sender: Any) {
+    @IBAction private func plusActionButton(_ sender: Any) {
         counter += 1
         counterLabel.text = String(counter)
         resultsTextView.text += "\n\(currentDate()): значение изменено на: \(counter)"
     }
-    @IBAction func minusActionButton(_ sender: Any) {
+    @IBAction private func minusActionButton(_ sender: Any) {
         if counter > 0 {
             counter -= 1
             counterLabel.text = String(counter)
@@ -41,7 +41,7 @@ final class ViewController: UIViewController {
             resultsTextView.text += "\n\(currentDate()): попытка уменьшить значение счетчика ниже 0"
         }
     }
-    @IBAction func refreshActionButton(_ sender: Any) {
+    @IBAction private func refreshActionButton(_ sender: Any) {
         counter = 0
         counterLabel.text = String(counter)
         resultsTextView.text += "\n\(currentDate()): значение сброшено"
